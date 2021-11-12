@@ -1,0 +1,7 @@
+tenant {{ segment['tenant'] }}
+  logical-router
+     interface segment {{ segment['name'] }}
+     {%- if segment['dhcp'] %}
+     {%- for dhcp_server_ip in dhcp %}
+     dhcp-relay server-ip {{ dhcp_server_ip}}{% endfor %}
+     {%- endif %}

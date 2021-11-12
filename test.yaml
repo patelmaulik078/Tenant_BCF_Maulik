@@ -1,0 +1,6 @@
+tenant: system
+network: 10.48.61.128/26
+name: uvm
+vlan: 981
+description: task_12345
+dhcp: [10.40.64.217, 10.40.65.54]
